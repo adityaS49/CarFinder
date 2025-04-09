@@ -157,7 +157,7 @@ export default function CarSearchPage() {
                   >
                     &times;
                   </button>
-                  <h2 className="text-2xl font-bold mb-4">Your Wishlist</h2>
+                  <h2 className="text-2xl font-bold mb-4 text-black">Your Wishlist</h2>
                   <Wishlist wishlist={wishlist} setWishlist={setWishlist} />
                 </motion.div>
               </motion.div>

@@ -1,7 +1,6 @@
 // components/CarModal.jsx
 import { motion, AnimatePresence } from "framer-motion";
-import {toast } from 'material-react-toastify';
-import { useEffect } from "react";
+import { toast } from "material-react-toastify";
 const CarModal = ({ car, onClose, wishlist, setWishlist }) => {
   if (!car) return null;
   const inWishlist = wishlist.find((item) => item.id === car.id);
@@ -15,7 +14,6 @@ const CarModal = ({ car, onClose, wishlist, setWishlist }) => {
     }
   };
 
- 
   return (
     <AnimatePresence>
       <motion.div
@@ -34,11 +32,10 @@ const CarModal = ({ car, onClose, wishlist, setWishlist }) => {
           exit={{ scale: 0.8, opacity: 0 }}
           className="bg-white opacity-100 p-6 rounded-2xl shadow-2xl max-w-2xl w-full relative"
         >
-
-          <button 
+          <button
             onClick={onClose}
             className="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-2xl"
-           >
+          >
             &times;
           </button>
 
