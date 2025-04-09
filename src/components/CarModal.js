@@ -1,6 +1,7 @@
 // components/CarModal.jsx
 import { motion, AnimatePresence } from "framer-motion";
 import {toast } from 'material-react-toastify';
+import { useEffect } from "react";
 const CarModal = ({ car, onClose, wishlist, setWishlist }) => {
   if (!car) return null;
   const inWishlist = wishlist.find((item) => item.id === car.id);
@@ -13,6 +14,8 @@ const CarModal = ({ car, onClose, wishlist, setWishlist }) => {
       toast.success("Added to Wishlist");
     }
   };
+
+ 
   return (
     <AnimatePresence>
       <motion.div
@@ -39,7 +42,7 @@ const CarModal = ({ car, onClose, wishlist, setWishlist }) => {
             &times;
           </button>
 
-          <h2 className="text-3xl font-bold mb-4">{car.name}</h2>
+          <div className="text-3xl font-bold mb-4 text-black">{car.name}</div>
 
           <img
             src={car.image}
