@@ -7,6 +7,7 @@ import Wishlist from "./WishList";
 import Pagination from "./Pagination";
 import CarModal from "./CarModal";
 import { motion, AnimatePresence } from "framer-motion";
+import SkeletonLoader from "./Loader";
 export default function CarSearchPage() {
   const [cars, setCars] = useState([]);
   const [filters, setFilters] = useState({
@@ -91,7 +92,7 @@ export default function CarSearchPage() {
 
       {/* Main Content */}
       {loading ? (
-        <p>Loading...</p>
+        <SkeletonLoader />
       ) : error ? (
         <p>{error}</p>
       ) : (
@@ -115,8 +116,12 @@ export default function CarSearchPage() {
                 😕 Oops! No cars found matching your filters.
               </div>
             )}
-            <CarModal wishlist={wishlist}
-            setWishlist={setWishlist} car={selectedCar} onClose={() => setSelectedCar(null)} />
+            <CarModal
+              wishlist={wishlist}
+              setWishlist={setWishlist}
+              car={selectedCar}
+              onClose={() => setSelectedCar(null)}
+            />
           </div>
 
           {/* Pagination */}
@@ -158,7 +163,6 @@ export default function CarSearchPage() {
               </motion.div>
             </AnimatePresence>
           )}
-          
         </>
       )}
     </div>
