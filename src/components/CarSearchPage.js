@@ -88,7 +88,7 @@ export default function CarSearchPage() {
       </div>
 
       {/* Search Filters */}
-      <SearchFilters filters={filters} setFilters={setFilters} />
+      <SearchFilters darkMode = {darkMode} filters={filters} setFilters={setFilters} />
 
       {/* Main Content */}
       {loading ? (

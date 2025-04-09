@@ -1,4 +1,4 @@
-export default function SearchFilters({ filters, setFilters }) {
+export default function SearchFilters({ filters, setFilters, darkMode }) {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-4">
       <select
@@ -35,7 +35,7 @@ export default function SearchFilters({ filters, setFilters }) {
         onChange={(e) =>
           setFilters({ ...filters, minPrice: Number(e.target.value) })
         }
-        className="border p-2 rounded"
+        className={`border p-2 rounded ${darkMode ? 'placeholder:text-white' : 'placeholder:text-black'}`}
       />
       <input
         type="number"
@@ -43,7 +43,7 @@ export default function SearchFilters({ filters, setFilters }) {
         onChange={(e) =>
           setFilters({ ...filters, maxPrice: Number(e.target.value) })
         }
-        className="border p-2 rounded "
+        className={`border p-2 rounded ${darkMode ? 'placeholder:text-white' : 'placeholder:text-black'}`}
       />
       <input
         type="number"
@@ -51,7 +51,7 @@ export default function SearchFilters({ filters, setFilters }) {
         onChange={(e) =>
           setFilters({ ...filters, seats: Number(e.target.value) })
         }
-        className="border p-2 rounded"
+        className={`border p-2 rounded ${darkMode ? 'placeholder:text-white' : 'placeholder:text-black'}`}
       />
       <select
         value={filters.sort}
