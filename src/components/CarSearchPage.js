@@ -63,7 +63,6 @@ export default function CarSearchPage() {
         darkMode ? "dark bg-gray-900 text-white" : "bg-white text-black"
       } h-full min-h-screen p-4 transition-colors duration-500`}
     >
-      {/* Navbar */}
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">Car Finder</h1>
         <div className="flex gap-2 items-center">
@@ -87,17 +86,14 @@ export default function CarSearchPage() {
         </div>
       </div>
 
-      {/* Search Filters */}
       <SearchFilters darkMode = {darkMode} filters={filters} setFilters={setFilters} />
-
-      {/* Main Content */}
       {loading ? (
         <SkeletonLoader />
       ) : error ? (
         <p>{error}</p>
       ) : (
         <>
-          {/* Car List */}
+  
           <div className="relative">
             {paginatedCars.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-4">
@@ -124,15 +120,12 @@ export default function CarSearchPage() {
             />
           </div>
 
-          {/* Pagination */}
           <Pagination
             total={cars.length}
             page={page}
             setPage={setPage}
             perPage={carsPerPage}
           />
-
-          {/* Wishlist Section with Transition */}
           {showWishlist && (
             <AnimatePresence>
               <motion.div

@@ -1,4 +1,3 @@
-// components/CarModal.jsx
 import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "material-react-toastify";
 const CarModal = ({ car, onClose, wishlist, setWishlist }) => {
