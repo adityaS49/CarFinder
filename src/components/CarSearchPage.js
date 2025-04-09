@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Heart } from "lucide-react";
 import SearchFilters from "./SearchFilters";
 import CarCard from "./CarCard";
-import Wishlist from "./Wishlist";
+import Wishlist from "./WishList";
 import Pagination from "./Pagination";
 import CarModal from "./CarModal";
 import { motion, AnimatePresence } from "framer-motion";
