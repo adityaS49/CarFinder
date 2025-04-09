@@ -282,7 +282,7 @@ export async function GET(request) {
       (seats === 0 || car.seats === seats)
     );
   });
-  // Sort logic
+  
   if (sort?.toLowerCase() === "lowtohigh") {
     filtered.sort((a, b) => a.price - b.price);
   } else if (sort?.toLowerCase() === "hightolow") {
