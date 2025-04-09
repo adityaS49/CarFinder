@@ -1,9 +1,9 @@
 export default function Wishlist({ wishlist, setWishlist }) {
   return (
     <div className="mt-8">
-      <h2 className="text-xl font-semibold mb-2">Wishlist</h2>
+      <h2 className="text-xl font-semibold mb-2 text-black">Wishlist</h2>
       {wishlist.length === 0 ? (
-        <p>No items in wishlist</p>
+        <p className="text-black">No items in wishlist!!</p>
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {wishlist.map((car) => (
